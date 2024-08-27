@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Encriptador</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header class="header">
+		<img class="header__logo" src="./Img/Logo.png">
+	</header>
+	<main class="encriptador">
+		<section class="encriptador__contenido">
+			<div class="encriptador__contenido__textarea">
+			<textarea id="textoUsuario" onclick="borrarTexto()" class="encriptador__contenido__textarea__usuario" placeholder="Escriba su texto aquí"></textarea>
+
+				<h2 class="encriptador__botones__subtitulo">Solo letras minúsculas y sin acentos</h2>
+					<div class="encriptador__botones">
+						<button onclick="encriptar()" class="encriptador__botones__estilo">Encriptar</button>
+						<button onclick="desencriptar()" class="encriptador__botones__estilo" id="desencriptarTexto" disabled>Desencriptar</button>
+					</div>
+			</div>
+			<div class="encriptador__contenido__textarea__encriptado">
+				<img src="./Img/1.png" class="encriptador__contenido__textarea__imagen" id="desencriptarImagen">
+				<textarea readonly id="textoEncriptado" class="encriptador__contenido__textarea__mensaje" hidden></textarea>
+					<button onclick="copiar()" class="encriptador__botones__estilo" id="copiarTexto" disabled>Copiar</button>
+			</div>							
+		</section>		
+	</main>
+	<footer class="footer">
+		<p>
+		Encriptador de texto desarrollado por Melisa Gonzalez
+		</p>
+	</footer>
+	<script src="app.js"></script>
+</body>
+</html>

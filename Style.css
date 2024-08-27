@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root{
+	--color-primario:#F3F5FC;
+	--color-secudario:#0A3871;
+	--color-terciario:#D8DFE8;
+	--color-cuaternario:#495057;
+
+	--fuente-inter: "Inter", sans-serif;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: var(--color-primario);
+	color: var(--color-secudario);
+}
+
+.header{
+	justify-content: start;
+}
+
+.encriptador__contenido{
+	display: flex;
+	padding: 0% 2%;
+}
+
+.encriptador__contenido__textarea{
+	width: 50%;
+}
+
+.encriptador__contenido__textarea__encriptado{
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	width: 50%;
+}
+
+.encriptador__contenido__textarea__usuario{	
+	background-color: var(--color-primario);
+	resize: none;
+	width: 100%;
+	height: 400px;
+	border-style: none;
+	font-family: var(--fuente-inter);
+	font-size: 2rem;
+	color: var(--color-secudario);
+
+}
+
+.encriptador__contenido__textarea__mensaje{
+	resize: none;
+	border-style: none;
+	width: 100%;
+	height: 400px;
+
+}
+
+.encriptador__botones{
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	padding: 1%;
+}
+
+.encriptador__botones__subtitulo{
+	padding: 0% 2%;
+	font-family: var(--fuente-inter);
+	color: var(--color-cuaternario);
+	font-size: 0.8rem;
+}
+
+.encriptador__botones__estilo{
+	background-color: var(--color-secudario);
+	width: 50%;
+	height: 67px;
+	text-align: center;
+	padding: 21px 0px;
+	font-family: var(--fuente-inter);
+	font-size: 1rem;
+	font-weight: 400;
+	text-decoration: none;
+	color: #ffffff;
+	border-radius: 24px;
+	display: flex;
+	justify-content: center;
+
+}
+
+.encriptador__botones__estilo:hover{
+	background-color: var(--color-secudario);
+	font-size: 1.1rem;
+	font-weight:450;
+} 
+
+.encriptador__botones__estilo:disabled{
+	background-color:var(--color-cuaternario);
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+
+.footer{
+	text-align: center;
+	color: var(--color-secudario);
+	font-family: var(--fuente-inter);
+	font-size: 0.8rem;
+}
+
+@media (max-width: 750px){
+	.encriptador__contenido{
+		flex-direction: column;
+		align-items: center;
+		padding: 0% 0%;
+
+	}
+	.encriptador__contenido__textarea{
+		width: auto;
+	}
+	.encriptador__contenido__textarea__encriptado{
+		width: auto;
+	}
+
+}
